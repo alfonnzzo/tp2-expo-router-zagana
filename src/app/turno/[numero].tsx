@@ -23,10 +23,7 @@ export default function Turno() {
   let contenido;
   if (indiceEnCola >= 0) {
     const posicion = indiceEnCola + 1;
-    let minutosEstimados = 0;
-    for (let i = 0; i < posicion; i++) {
-      minutosEstimados = minutosEstimados + MINUTOS_POR_PEDIDO;
-    }
+    const minutosEstimados = posicion * MINUTOS_POR_PEDIDO;
     contenido = (
       <>
         <Texto tipo="titulo">Turno N° {numeroTurno}</Texto>
