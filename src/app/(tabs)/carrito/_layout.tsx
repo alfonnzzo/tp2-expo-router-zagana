@@ -1,0 +1,22 @@
+import { Stack } from 'expo-router';
+
+export const unstable_settings = {
+  anchor: 'index',
+};
+
+export default function LayoutCarrito() {
+  return (
+    <Stack screenOptions={{ headerBackButtonDisplayMode: 'minimal' }}>
+      <Stack.Screen name="index" options={{ title: 'Carrito' }} />
+      <Stack.Screen
+        name="nota"
+        options={{
+          title: 'Nota para la cocina',
+          presentation: 'formSheet',
+          sheetAllowedDetents: [0.5, 1],
+          sheetGrabberVisible: true,
+        }}
+      />
+    </Stack>
+  );
+}
